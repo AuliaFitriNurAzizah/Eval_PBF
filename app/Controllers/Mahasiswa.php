@@ -17,8 +17,8 @@ class Mahasiswa extends ResourceController
     public function index()
     {
            $data = $this->model
-            ->select('mahasiswa.*, dosen.nama as dosen_wali')
-            ->join('dosen', 'dosen.id = mahasiswa.dosen_wali_id')
+            // ->select('mahasiswa.*, dosen.nama as dosen_wali')
+            // ->join('dosen', 'dosen.id = mahasiswa.dosen_wali_id')
             ->findAll();
 
         return $this->respond($data);
